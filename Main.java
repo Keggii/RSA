@@ -7,7 +7,7 @@ public class Main {
 
       int d = privateKey(e, phi);
 
-      int message = 186;
+      int message = 186; //message muss kleiner als n sein
       int em = encrypt(message, e, n);
       System.out.println("encrypted: " + em);
       int dm = decrypt(em, d, n);
@@ -38,8 +38,6 @@ public class Main {
       }
       return d;
   }
-
-
 
   public static int gcd(int a, int b) {
       if (b == 0) return a;
